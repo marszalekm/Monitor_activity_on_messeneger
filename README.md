@@ -1,7 +1,7 @@
 # stalking_activity_on_messeneger
 Simple script that monitors somebody's activity on messenger. Perfect for every stalker!
 
-Script is based on Selenium webdriver in Chrome, however now I believe that Facebook API would be better solution. 
+Script is based on Selenium webdriver in Chrome, however I believe that Facebook API would be better solution for this task. 
 Idea is simple, the script checks activity of given person using loop, with given frequency and time and saves the data to a file.
 
 Ideas of improvements:
