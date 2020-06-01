@@ -1,0 +1,2 @@
+Selenium==3.141.0
+ChromeDriver==81.0.4044.138
