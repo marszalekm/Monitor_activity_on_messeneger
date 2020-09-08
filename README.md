@@ -1,4 +1,4 @@
-# stalking_activity_on_messeneger
+# Stalking activity on messeneger (May 2020)
 Simple script that monitors somebody's activity on messenger. Perfect for every stalker!
 
 Script is based on Selenium webdriver in Chrome, however I believe that Facebook API would be better solution for this task. 
