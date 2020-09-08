@@ -2,19 +2,20 @@
 
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 import time
 from options import email, passwd, profile_link, total_time, freq
 
+
 class ActivityCheckBot:
 
     def __init__(self):
         chrome_options = webdriver.ChromeOptions()
-        prefs = {"profile.default_content_setting_values.notifications" : 2}
+        prefs = {"profile.default_content_setting_values.notifications": 2}
         chrome_options.add_argument('headless')
-        chrome_options.add_experimental_option("prefs",prefs)
+        chrome_options.add_experimental_option("prefs", prefs)
 
         self.driver = webdriver.Chrome(chrome_options=chrome_options)
 
@@ -34,7 +35,7 @@ class ActivityCheckBot:
         Purpose of this function is to move cursor to other place than the entry box for message.
         """
         try:
-            empty_space = WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((By.CLASS_NAME, '_6ynn')))
+            empty_space = WebDriverWait(self.driver, 5).until(ec.presence_of_element_located((By.CLASS_NAME, '_6ynn')))
             empty_space.click()
 
         except TimeoutException:
@@ -49,7 +50,7 @@ class ActivityCheckBot:
 
         while loop <= loops:
             try:
-                status = WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((By.CLASS_NAME, '_2v6o')))
+                status = WebDriverWait(self.driver, 5).until(ec.presence_of_element_located((By.CLASS_NAME, '_2v6o')))
             except TimeoutException:
                 print("There is something wrong, I cannot access status.")
 
@@ -68,6 +69,7 @@ class ActivityCheckBot:
     def exit_bot(self):
         self.driver.stop_client()
         self.driver.close()
+
 
 bot = ActivityCheckBot()
 bot.login()
