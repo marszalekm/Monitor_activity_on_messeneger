@@ -5,7 +5,7 @@ Script is based on Selenium webdriver in Chrome, however I believe that Facebook
 Idea is simple, the script imports proper information from options.py file and checks activity of given person using loop, with given frequency and time and saves the data to a file.
 
 Ideas of improvements:
-- the script could note only if changes of activity
+- the script could note only if user's activity changes
 - monitor if the message was read and send some kind of notifications
 - show graphically the activity on timeline 
 
