@@ -8,7 +8,7 @@ from selenium.common.exceptions import TimeoutException
 import time
 from options import email, passwd, profile_link, total_time, freq
 
-class ActivityCheckBot():
+class ActivityCheckBot:
 
     def __init__(self):
         chrome_options = webdriver.ChromeOptions()
